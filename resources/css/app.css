@@ -1,0 +1,9 @@
+/* ./resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-image {
+    background-image: url("/img/doctors_standing.jpg");
+}
