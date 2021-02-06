@@ -1,4 +1,4 @@
-<footer class="relative bg-gray-300 pt-24 pb-6">
+<footer class="relative bg-gray-300 pt-16 pb-6">
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
       style="height: 80px; transform: translateZ(0px);"
@@ -20,7 +20,7 @@
     </div>
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap">
-        <div class="w-full lg:w-6/12 px-4">
+        <div class="w-full lg:w-6/12 px-4 flex flex-col items-center">
           <h4 class="text-3xl font-semibold">... Sağlık Hizmeti</h4>
           <div class="mt-6">
             <button
@@ -41,9 +41,9 @@
             >
           </div>
         </div>
-        <div class="w-full lg:w-6/12 px-4">
-          <div class="flex flex-wrap items-top mb-6">
-            <div class="w-full lg:w-4/12 px-4 ml-auto">
+        <div class="w-full lg:w-6/12 mt-8 lg:mt-0">
+          <div class="flex w-full items-top mb-6">
+            <div class="w-full px-4 flex flex-col items-center">
               <span
                 class="block uppercase text-gray-600 text-sm font-semibold mb-2"
                 >YARARLI SAYFALAR</span

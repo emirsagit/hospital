@@ -31,4 +31,5 @@
           document.getElementById(collapseID).classList.toggle("block");
         }
       </script>
+      <script src="{{ asset('js/app.js') }}" defer></script>
 </html>

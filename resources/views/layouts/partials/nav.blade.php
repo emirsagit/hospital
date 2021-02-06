@@ -25,37 +25,31 @@ class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between lg
     id="example-collapse-navbar"
   >
     <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-      <li class="flex items-center">
+      <li class="flex items-center lg:hover:bg-indigo-400 rounded">
         <a
-          class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
+          class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="#pablo"
           >{{ (__('Anasayfa')) }}</a
         >
       </li>
-      <li class="flex items-center">
+      @include('layouts.partials._dropdown')
+      <li class="flex items-center lg:hover:bg-indigo-400 rounded">
         <a
-          class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
-          href="#pablo"
-          >{{ (__('Hizmetlerimiz')) }}</a
-        >
-      </li>
-      <li class="flex items-center">
-        <a
-          class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
+          class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="#pablo"
           >{{ (__('Hakkımızda')) }}</a
         >
       </li>
-      <li class="flex items-center">
+      <li class="flex items-center lg:hover:bg-indigo-400 rounded">
         <a
-          class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
+          class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="#pablo"
           >{{ (__('Blog')) }}</a
         >
       </li>
-      <li class="flex items-center">
+      <li class="flex items-center lg:hover:bg-indigo-400 rounded">
         <a
-          class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
+          class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="#pablo"
           >{{ (__('İletişim')) }}</a
         >

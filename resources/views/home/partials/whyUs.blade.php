@@ -1,4 +1,4 @@
-<section class="py-20 relative block bg-gray-900">
+<section class="pt-16 lg:pb-32 pb-20 relative block bg-gray-900">
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
       style="height: 80px; transform: translateZ(0px);"
@@ -18,7 +18,7 @@
         ></polygon>
       </svg>
     </div>
-    <div class="container mx-auto px-4 lg:pt-12 lg:pb-24">
+    <div class="container mx-auto px-4">
       <div class="flex flex-wrap text-center justify-center">
         <div class="w-full lg:w-6/12 px-4">
           <h2 class="text-4xl font-semibold text-white">Neden ... Evde Sağlık?</h2>

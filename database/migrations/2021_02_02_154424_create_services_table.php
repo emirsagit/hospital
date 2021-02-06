@@ -22,6 +22,8 @@ class CreateServicesTable extends Migration
             $table->string('image')->nullable();
             $table->string('alt')->nullable();
             $table->string('video')->nullable();
+            $table->string('seo_title')->nullable();
+            $table->string('seo_description')->nullable();
             $table->string('language');
             $table->timestamps();
         });
