@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <a class="py-2 px-4 capitalize tracking-wide bg-blue-600 dark:bg-gray-800 text-white font-medium rounded hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700 cursor-pointer mt-4 text-center">
+    <a class="py-2 px-4 capitalize tracking-wide bg-blue-600 dark:bg-gray-800 text-white font-medium rounded hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700 cursor-pointer mt-4 text-center" href="{{ '/' . app()->getLocale() . trans('routes.services') }}">
         Tüm Hizmetlerimizi Görüntüleyin
     </a>
 </div>

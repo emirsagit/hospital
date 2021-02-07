@@ -9,7 +9,17 @@ class Service extends Model
 {
     use HasFactory;
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     protected $fillable = [
-        'title', 'slug', 'video', 'image', 'alt', 'excerpt', 'body', 'language'
+        'title', 'slug', 'video', 'image', 'alt', 'excerpt', 'body', 'language', 'seo_title', 'seo_description'
     ];
+
+    public function path()
+    {
+        return '/' . $this->slug;
+    }
 }

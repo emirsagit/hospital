@@ -17,12 +17,10 @@ class Localization
      */
     public function handle($request, Closure $next)
     {
-        if (Request::segment(1) === "en") {
-            session()->put('locale', 'en');
-        } else {
-            session()->put('locale', 'tr');
-        }
-        App::setlocale(session()->get('locale'));
+        if(in_array($local = Request::segment(1) , config('localization.languages'))) {
+            App::setlocale($local);
+        };
+
         return $next($request);
     }
 }

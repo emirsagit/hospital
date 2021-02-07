@@ -1,7 +1,8 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
 
+@tailwind components;
+
+@tailwind utilities;
 
 .bg-image {
     background-image: url('/img/doctors_standing.jpg');

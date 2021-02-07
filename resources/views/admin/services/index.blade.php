@@ -3,6 +3,11 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Hizmetlerimiz') }}
         </h2>
+        @isset($success)
+        <div class="bg-green-700">
+            <p class="text-white font-bold text-lg mt-4 p-2">{{ $success }}</p>
+        </div>
+        @endisset
     </x-slot>
 
     <div class="py-6">
