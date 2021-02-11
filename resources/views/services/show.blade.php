@@ -1,40 +1,92 @@
 @extends('layouts.app')
 
 @section('content')
-<main>
-    <div class="relative pt-16 lg:pb-32 pb-20 flex content-center items-center justify-center"
-        style="min-height: 75vh;">
-        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url({{ $service->image }})">
+<main class="min-h-screen mb-32">
+    <div class="bg-gradient-to-b from-blue-500 bg-contain bg-no-repeat">
+        <div class="pt-24">
+            <div class="flex flex-row justify-evenly">
+                @include('layouts.shared.telephoneAndOnlineLinks')
+            </div>
+            <h1 class="text-4xl text-gray-800 font-extrabold text-center mt-4">
+                {{ $service->title }}
+            </h1>
         </div>
     </div>
-    <section class="lg:pb-32 pb-20 z-60 -mt-36">
-        <div class="container relative mx-auto lg:mt-12">
-            <div class="items-center bg-white  flex flex-wrap">
-                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                    <h1 class="text-white font-semibold text-4xl lg:text-5xl">
-                        {{ __('Evde Sağlık Hizmeti') }}
-                    </h1>
-                    <p class="mt-4 text-md lg:text-lg text-white">
-                        {{ __('Evde sağlık hizmeti sunabilmek için her branşta uzman doktorlarımız ve diğer sağlık personelimizle 7/24 hizmet vermekteyiz. Bir telefon kadar yakınız...') }}
-                    </p>
-                    <div class="mt-4 mb-0 lg:mb-4 flex flex-row justify-evenly">
-                        <a
-                            class="bg-blue-500 text-white active:bg-blue-100 text-lg font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md hover:bg-blue-400 outline-none focus:outline-none cursor-pointer flex flex-row select-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                                {{ Config::get('admin.tel') }}
-                        </a>
-                        <a
-                            class="hidden md:flex bg-green-500 text-white active:bg-green-100 text-lg font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md hover:bg-green-400 outline-none focus:outline-none cursor-pointer select-none">
-                            {{ __('ONLİNE GÖRÜŞME') }}
-                        </a>
-                    </div>
-                </div>
+    <div class="mt-4 border-t border-b border-blue-200 text-sm text-gray-700 font-light lg:pl-32">
+        <p class="px-4"><a href="{{ '/' . app()->getLocale() }}" class="hover:text-gray-900">{{ __('Anasayfa') }} /</a>
+            {{ $service->title }}</p>
+    </div>
+    <div class="relative mb-32 lg:px-32 flex lg:flex-row flex-col">
+        <div class="lg:px-4 lg:w-8/12 text-justify">
+            <img src="{{ $service->image }}" alt="{{ $service->alt }}" width="1000" height="562.5"
+                class="shadow-lg rounded">
+            <div class="px-4 lg:px-0 mt-4 ck-editor__editable">
+                {!! $service->body !!}
             </div>
         </div>
-    </section>
+        <div class="mx-4 lg:w-4/12">
+            <div class="sticky top-0 flex items-center justify-center">
+
+                <form id="form" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+                    <p class="block text-gray-700 font-bold mb-2 text-xl text-center">Hangi Hizmetimiz Hakkında Görüşmek İstersiniz?</p>
+                    <br>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            İsim
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="name" id="name" type="text" placeholder="Adınız Soyadınız" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="telefon">
+                            Telefon
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="tel" id="tel" type="tel" placeholder="Telefon Numaranız" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            E-Posta
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="email" id="email" type="email" placeholder="E-Posta Adresiniz" required>
+                    </div>
+
+                    {{-- <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="Date">
+                            Fecha
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="date" id="date" type="date" placeholder="Ingresa tu Fecha de Nacimiento" required>
+                    </div> --}}
+
+                    <div class="mb-4">
+
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
+                            Mesajınız
+                        </label>
+                        <textarea
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="body" id="body" type="text" placeholder="Kısaca Mesajınız"
+                            required></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button id="submit"
+                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit">
+                            İletişime Geçin
+                        </button>
+                    </div>
+                    <div class="mb-4">
+                </form>
+            </div>
+        </div>
+    </div>
 </main>
 @endsection

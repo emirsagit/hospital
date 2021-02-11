@@ -1,15 +1,15 @@
 <div class="relative">
-<p class="text-xl lg:text-2xl text-white font-extrabold rounded-t text-center lg:mb-4 mt-4">En Çok Tercih Edilen Hizmetlerimiz</p>
+<p class="text-xl lg:text-2xl text-white font-extrabold rounded-t text-center lg:mb-2 mt-4">En Çok Tercih Edilen Hizmetlerimiz</p>
 </div>
 <div class="flex flex-wrap justify-center">
-    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+    <div class="lg:pt-12 pt-2 w-full md:w-4/12 px-4 text-center">
         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
                 <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" class="w-10 h-10" fill="white"><path d="M464.8 12.8c-66.56 11.16-124.84 53.09-156.97 112.53-32.12 60.02-33.28 137.92-2.69 199.09 48.28 96.57 162.16 143.7 264.11 109.07 64.25-21.93 115.03-72.52 136.39-136 21.93-65.6 12.89-133.5-25.78-192.36-9.62-14.81-42.9-48.09-57.71-57.71C574.64 16.26 518.09 3.95 464.8 12.8zM470.19 526.6c-34.82 1.54-93.87 7.89-105.22 11.54-3.27.96-3.46 6.54-3.46 80.41v79.25l6.73 3.27c27.32 13.08 40.01 47.9 27.89 75.98-6.16 14.04-21.93 28.28-36.16 32.32-22.51 6.54-46.36-.19-61.56-17.5-9.62-10.97-13.85-22.89-13.85-39.44 0-21.54 12.7-41.74 32.13-50.98l6.35-3.08v-74.83c0-54.25-.58-75.02-2.12-75.02-5.77 0-45.4 14.81-65.21 24.24-97.34 46.75-153.7 128.7-163.51 238.34-1.15 12.89-1.92 50.01-1.54 83.68.58 57.9.77 60.98 4.81 68.29 4.81 9.04 14.23 18.27 23.66 23.28 6.54 3.46 19.62 3.66 380.88 3.66h374.14l7.69-4.23c9.04-4.81 18.27-14.23 23.28-23.66 3.27-6.16 3.66-12.69 4.23-67.33.96-102.34-5.39-140.81-32.32-195.25-26.93-54.45-72.32-97.73-132.73-126.78-19.81-9.42-59.44-24.24-65.21-24.24-1.54 0-2.12 12.7-1.73 46.36l.58 46.55 10.58 2.5c37.7 9.43 66.36 40.01 78.87 83.49 8.85 31.16 6.92 79.45-4.62 110.42-2.89 7.5-4.04 14.23-3.46 19.04 1.35 11.16-1.15 20.01-7.89 27.7-13.27 15.2-33.86 16.35-48.09 2.88-7.89-7.5-10.97-14.24-10.97-24.43 0-15.97 10-29.43 24.05-32.89 8.66-1.92 10-3.66 13.66-18.66 4.43-16.93 4.81-53.09.96-68.67-10-39.82-32.51-60.79-67.9-62.9-33.47-2.12-55.98 10.39-70.6 39.43-11.16 22.31-14.81 57.52-8.85 85.99 4.04 18.85 6.35 24.04 11.35 24.04 7.5 0 19.04 8.27 23.66 17.12 15.77 29.82-15.96 61.75-45.59 45.97-12.89-6.92-20.39-22.51-17.5-36.55.96-4.42 0-9.42-2.89-16.93-8.27-20.2-10.97-40.21-9.81-70.98 1.16-31.93 3.85-43.67 15.2-67.33 13.46-28.28 40.4-50.4 69.44-56.94l10-2.31.58-50.98c.38-43.67 0-51.36-2.31-52.13-5-1.92-41.55-6.93-64.63-8.85-25.97-2.29-78.87-3.63-100.99-2.86z"/></svg>
                 </div>
-                <h6 class="text-xl font-semibold">{{ __('Evde Muayene Hizmeti') }}</h6>
+                <h6 class="text-xl font-semibold">{{ __('Evde Sağlık Hizmeti') }}</h6>
                 <p class="mt-2 mb-4 text-gray-600">
                     {{ __('Kardiyoloji, Beyin ve Sinir Cerrahisi, Kulak Burun Boğaz, Göğüs Hastalıkları, Jinekoloji (Kadın Doğum), Dahiliye, Nöroloji başta olmak üzere her branşta evde ya da online doktor hizmetimiz bulunmaktadır.') }}
                 </p>
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <a class="py-2 px-4 capitalize tracking-wide bg-blue-600 dark:bg-gray-800 text-white font-medium rounded hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700 cursor-pointer mt-4 text-center" href="{{ '/' . app()->getLocale() . trans('routes.services') }}">
+    <a class="py-2 px-4 capitalize tracking-wide bg-blue-600 dark:bg-gray-800 text-white font-medium rounded hover:bg-blue-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700 cursor-pointer mt-4 text-center transition duration-500 ease-in-out" href="{{ '/' . app()->getLocale() . trans('routes.services') }}">
         Tüm Hizmetlerimizi Görüntüleyin
     </a>
 </div>

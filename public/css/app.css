@@ -31425,7 +31425,83 @@ select {
 }
 
 .bg-image {
-  background-image: url('/img/doctors_standing.jpg');
+  background-image: url('/img/doktor_giris.jpg');
+}
+
+/* ckeditor */
+
+div.ck-editor__editable p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+div.ck-editor__editable h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(67, 56, 202, var(--tw-border-opacity));
+}
+
+div.ck-editor__editable h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(67, 56, 202, var(--tw-text-opacity));
+}
+
+div.ck-editor__editable h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+div.ck-editor__editable a {
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+  cursor: pointer;
+}
+
+div.ck-editor__editable a:hover {
+  --tw-text-opacity: 1;
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
+.ck-editor__editable {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.ck-editor__editable ul {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-position: inside;
+}
+
+.ck-editor__editable ol {
+  list-style-type: decimal;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-position: inside;
+}
+
+/* ckeditor end */
+
+.bg-whatsapp {
+  background-color: #7ad06d;
 }
 
 @media (min-width: 640px) {

@@ -4,7 +4,7 @@
 <main>
   <div class="relative pt-16 lg:pb-32 pb-20 flex content-center items-center justify-center" style="min-height: 75vh;">
     <div class="absolute top-0 w-full h-full bg-center bg-cover bg-image">
-      <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+      {{-- <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span> --}}
     </div>
 
     @include('home.partials.title')

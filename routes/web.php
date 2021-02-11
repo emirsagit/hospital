@@ -19,24 +19,9 @@ use App\Http\Controllers\AdminServicesController;
 
 $currentLocale = app()->getLocale();
 /* other languages */
-foreach (config('localization.languages') as $locale) {
-    app()->setLocale($locale);
-    Route::prefix($locale)->group(function () {
-        Route::get('/', [HomeController::class, 'index']);
-        Route::get(trans('routes.about'), [HomeController::class, 'about']);
-        Route::get('/hizmetlerimiz', [ServicesController::class, 'index']);
-    });
-};
-app()->setLocale($currentLocale); 
-/* some tr routes for seo*/
-Route::get('/language/{locale}', [LocalizationController::class, 'index']);
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/{service}', [ServicesController::class, 'show'])->name('services.show');
 
-
-
-
-
+/* admin */
+require __DIR__ . '/auth.php';
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'admin'])->name('dashboard');
@@ -48,5 +33,23 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
         Route::post('/store', [AdminServicesController::class, 'store'])->name('admin.services.store');
     });
 });
+/* endadmin */
 
-require __DIR__ . '/auth.php';
+foreach (config('localization.languages') as $locale) {
+    app()->setLocale($locale);
+    Route::prefix($locale)->group(function () {
+        Route::get('/', [HomeController::class, 'index']);
+        Route::get(trans('routes.about'), [HomeController::class, 'about']);
+        Route::get('/hizmetlerimiz', [ServicesController::class, 'index']);
+    });
+};
+app()->setLocale($currentLocale); 
+
+/* some tr routes for seo*/
+Route::get('/language/{locale}', [LocalizationController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/{service}', [ServicesController::class, 'show'])->name('services.show');
+
+
+
+

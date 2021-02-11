@@ -21,7 +21,7 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 px-4 flex flex-col items-center">
-          <h4 class="text-3xl font-semibold">... Sağlık Hizmeti</h4>
+          <h4 class="text-3xl font-semibold">Evde Bakım Hizmeti</h4>
           <div class="mt-6">
             <button
               class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
@@ -93,7 +93,7 @@
       <div
         class="flex flex-wrap items-center md:justify-between justify-center"
       >
-        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="w-full lg:w-4/12 px-4 mx-auto text-center">
           <div class="text-sm text-gray-600 font-semibold py-1">
             Copyright © 2021. Tüm hakları saklıdır
           </div>

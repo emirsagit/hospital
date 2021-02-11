@@ -21,11 +21,11 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap text-center justify-center">
         <div class="w-full lg:w-6/12 px-4">
-          <h2 class="text-4xl font-semibold text-white">Neden ... Evde Sağlık?</h2>
+          <h2 class="text-4xl font-semibold text-white">Neden Evde Sağlık Acil Bakım?</h2>
         </div>
       </div>
       <div class="flex flex-wrap mt-12 justify-center">
-        <div class="w-full lg:w-3/12 px-4 text-center">
+        <div class="w-full md:w-3/12 px-4 text-center">
           <div
             class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
           >
@@ -38,7 +38,7 @@
             Günün her saati, haftanın her günü iletişime geçebilirsiniz.
           </p>
         </div>
-        <div class="w-full lg:w-3/12 px-4 text-center">
+        <div class="w-full md:w-3/12 px-4 text-center">
           <div
             class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
           >
@@ -51,7 +51,7 @@
             Ekibimiz alanında uzman doktor ve sağlık görevlilerinden oluşmaktadır.
           </p>
         </div>
-        <div class="w-full lg:w-3/12 px-4 text-center">
+        <div class="w-full md:w-3/12 px-4 text-center">
           <div
             class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
           >
