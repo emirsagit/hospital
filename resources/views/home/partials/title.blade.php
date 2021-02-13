@@ -5,7 +5,7 @@
                 {{ __('Evde Sağlık Hizmeti') }}
             </h1>
             <p class="mt-4 text-md lg:text-lg text-white">
-                {{ __('Evde sağlık hizmeti sunabilmek için her branşta uzman doktorlarımız ve diğer sağlık personelimizle 7/24 hizmet vermekteyiz. Bir telefon kadar yakınız...') }}
+                {{ __('home.content') }}
             </p>
             <div class="mt-4 mb-0 lg:mb-4 flex flex-row justify-evenly">
                 @include('layouts.shared.telephoneAndOnlineLinks')

@@ -25,6 +25,7 @@ class CreateServicesTable extends Migration
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
             $table->string('language')->index();
+            $table->foreignId('language_parent')->nullable()->constrained('services');
             $table->timestamps();
         });
     }

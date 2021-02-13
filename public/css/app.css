@@ -31428,6 +31428,9 @@ select {
   background-image: url('/img/doktor_giris.jpg');
 }
 
+[x-cloak] { display: none;
+}
+
 /* ckeditor */
 
 div.ck-editor__editable p {
@@ -184523,4 +184526,5 @@ div.ck-editor__editable a:hover {
             animation: bounce 1s infinite;
   }
 }
+
 

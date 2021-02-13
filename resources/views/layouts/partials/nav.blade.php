@@ -38,22 +38,22 @@ class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between lg
       <li class="flex items-center lg:hover:bg-indigo-400 transition duration-500 ease-in-out rounded">
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
-          href="#pablo"
-          >{{ (__('Hakkımızda')) }}</a
+          href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}"
+          >{{ trans('routes.about') }}</a
         >
       </li>
       <li class="flex items-center lg:hover:bg-indigo-400 transition duration-500 ease-in-out rounded">
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
-          href="#pablo"
-          >{{ (__('Blog')) }}</a
+          href="{{ '/' . app()->getLocale() . '/' .   trans('routes.blog') }}"
+          >{{ trans('routes.blog') }}</a
         >
       </li>
       <li class="flex items-center lg:hover:bg-indigo-400 transition duration-500 ease-in-out rounded">
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
-          href="#pablo"
-          >{{ (__('İletişim')) }}</a
+          href="{{ '/' . app()->getLocale() . '/' .   trans('routes.contact') }}"
+          >{{ trans('routes.contact') }}</a
         >
       </li>
     </ul>

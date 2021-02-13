@@ -15,11 +15,21 @@ class Service extends Model
     }
 
     protected $fillable = [
-        'title', 'slug', 'video', 'image', 'alt', 'excerpt', 'body', 'language', 'seo_title', 'seo_description'
+        'title', 'slug', 'video', 'image', 'alt', 'excerpt', 'body', 'language', 'seo_title', 'seo_description', 'language_parent'
     ];
 
     public function path()
     {
         return '/' . $this->slug;
     }
+
+    public function childrenLanguages()
+    {
+        return $this->hasMany($this, 'language_parent');
+    } 
+
+    public function parentLanguage()
+    {
+        return $this->hasOne($this, 'id', 'language_parent');
+    } 
 }

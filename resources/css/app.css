@@ -7,7 +7,8 @@
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
 }
-
+ 
+[x-cloak] { display: none; }
 
 /* ckeditor */
 div.ck-editor__editable p {
@@ -64,3 +65,4 @@ div.ck-editor__editable a {
 .bg-whatsapp {
     background-color: #7ad06d;
 }
+

@@ -6,9 +6,7 @@
     <div class="absolute top-0 w-full h-full bg-center bg-cover bg-image">
       {{-- <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span> --}}
     </div>
-
     @include('home.partials.title')
-
     @include('layouts.shared.hrwhite')
   </div>
   <section class="lg:pb-32 pb-20 bg-gray-300 -mt-24">

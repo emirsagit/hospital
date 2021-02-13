@@ -4,15 +4,15 @@
 <main class="min-h-screen mb-32">
     <div class="bg-gradient-to-b from-blue-500 bg-contain bg-no-repeat">
         <div class="pt-24">
-            <div class="flex flex-row justify-evenly">
+            <div class="flex flex-row justify-evenly mb-8 mt-4">
                 @include('layouts.shared.telephoneAndOnlineLinks')
             </div>
-            <h1 class="text-4xl text-gray-800 font-extrabold text-center mt-4">
+            <h1 class="text-4xl text-gray-800 font-extrabold text-center">
                 {{ $service->title }}
             </h1>
         </div>
     </div>
-    <div class="mt-4 border-t border-b border-blue-200 text-sm text-gray-700 font-light lg:pl-32">
+    <div class="mt-8 border-t border-b border-blue-200 text-sm text-gray-700 font-light lg:pl-32">
         <p class="px-4"><a href="{{ '/' . app()->getLocale() }}" class="hover:text-gray-900">{{ __('Anasayfa') }} /</a>
             {{ $service->title }}</p>
     </div>

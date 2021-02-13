@@ -40,7 +40,8 @@ foreach (config('localization.languages') as $locale) {
     Route::prefix($locale)->group(function () {
         Route::get('/', [HomeController::class, 'index']);
         Route::get(trans('routes.about'), [HomeController::class, 'about']);
-        Route::get('/hizmetlerimiz', [ServicesController::class, 'index']);
+        Route::get(trans('routes.contact'), [HomeController::class, 'contact']);
+        Route::get(trans('routes.services'), [ServicesController::class, 'index']);
     });
 };
 app()->setLocale($currentLocale); 
