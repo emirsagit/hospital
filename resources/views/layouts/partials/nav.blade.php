@@ -1,5 +1,5 @@
 <nav
-class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between lg:justify-around px-2 py-3 navbar-expand-lg bg-gradient-to-b from-gray-700"
+class="top-0 absolute z-40 w-full flex flex-wrap items-center justify-between lg:justify-around px-2 py-3 navbar-expand-lg bg-gradient-to-b from-gray-700"
 >
 <div
   class="container px-4 mx-auto flex flex-wrap items-center justify-between"
@@ -39,21 +39,21 @@ class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between lg
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="{{ '/' . app()->getLocale() . '/' .   trans('routes.about') }}"
-          >{{ trans('routes.about') }}</a
+          >{{ __('Hakkımızda') }}</a
         >
       </li>
       <li class="flex items-center lg:hover:bg-indigo-400 transition duration-500 ease-in-out rounded">
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="{{ '/' . app()->getLocale() . '/' .   trans('routes.blog') }}"
-          >{{ trans('routes.blog') }}</a
+          >{{ __('Blog') }}</a
         >
       </li>
       <li class="flex items-center lg:hover:bg-indigo-400 transition duration-500 ease-in-out rounded">
         <a
           class="lg:text-white text-gray-800 px-3 py-4 lg:py-2 flex items-center text-sm lg:text-lg uppercase font-bold"
           href="{{ '/' . app()->getLocale() . '/' .   trans('routes.contact') }}"
-          >{{ trans('routes.contact') }}</a
+          >{{ __('İletişim') }}</a
         >
       </li>
     </ul>

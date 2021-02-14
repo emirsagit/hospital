@@ -91,7 +91,7 @@
     <hr class="my-6 border-gray-400" />
     <div class="flex flex-wrap items-center md:justify-between justify-center">
       <div class="w-full lg:w-4/12 px-4 mx-auto text-center">
-        <div class="text-sm text-gray-600 font-semibold py-1">
+        <div class="text-sm text-gray-600 font-semibold pb-8 lg:py-1 lg:pb-1">
           Copyright © 2021. {{ __('Tüm hakları saklıdır') }}
         </div>
       </div>

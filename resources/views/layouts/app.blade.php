@@ -9,16 +9,18 @@
   {!! SEO::generate(true) !!}
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" rel="preload">
+  {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
   <!-- Styles -->
   @yield('head')
 </head>
 
 <body class="text-gray-800 antialiased" x-data="{ form: false }">
   @include('layouts.partials.nav')
-  @include('layouts.partials.whapsappAndPhoneIcons')
   @include('layouts.partials.appointmentForm')
+  @include('layouts.partials.whapsappAndPhoneIcons')
   @include('layouts.partials.appointmentFormButton')
   @include('layouts.partials.changeLanguage')
   <div>

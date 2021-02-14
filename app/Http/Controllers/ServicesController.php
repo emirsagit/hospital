@@ -32,7 +32,6 @@ class ServicesController extends Controller
             }
         }
         SEOTools::opengraph()->setUrl('https://evdesaglikacilbakim.com');
-        SEOTools::setCanonical('https://evdesaglikacilbakim.com');
         SEOTools::opengraph()->addProperty('type', 'website');
         SEOTools::jsonLd()->addImage('https://evdesaglikacilbakim.com/img/doktor_giris.jpg');
         return view('services.show', compact('service'));

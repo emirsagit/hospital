@@ -6,6 +6,8 @@
 
 .bg-image {
     background-image: url('/img/doktor_giris.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
 }
  
 [x-cloak] { display: none; }

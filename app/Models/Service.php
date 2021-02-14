@@ -23,6 +23,7 @@ class Service extends Model
         return '/' . $this->slug;
     }
 
+    // Aşağıdaki ilişkiler sayesinde alternate language taglarını dinamik olarak ekledim.
     public function childrenLanguages()
     {
         return $this->hasMany($this, 'language_parent');

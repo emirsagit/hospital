@@ -12,7 +12,7 @@
     </div>
     <div class="w-full lg:w-4/12 px-4 mr-auto ml-auto">
         <div class="relative flex flex-col min-w-0 break-words w-full shadow-lg rounded-lg bg-blue-600">
-            <img alt="" width="374" height="249.183" src="/img/home-health-care.jpg"
+            <img alt="evde-saglik-güvenilir-eller" width="800" height="533" src="/img/home-health-care.jpg"
                 class="w-full align-middle rounded-t-lg" />
             <blockquote class="relative p-8 mb-4">
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
