@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
-use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ServicesAdminFormRequest;
+use Illuminate\Http\Request;
 
 class AdminServicesController extends Controller
 {
@@ -16,7 +17,9 @@ class AdminServicesController extends Controller
 
     public function create()
     {
-        return view('admin.services.create');
+        return view('admin.services.create', [
+            'parents' => Service::where('language', 'tr')->get()
+        ]);
     }
 
     public function store(ServicesAdminFormRequest $request)
@@ -24,10 +27,13 @@ class AdminServicesController extends Controller
         if ($request->file('image')) {
             $image       = $request->file('image');
             $filename    = $image->getClientOriginalName();
-            Image::make($image)->resize(1000, 562.5)->save(public_path('/storage/services/' . $filename));
-        }
+            $img = Image::make($image)->resize(1000, 562.5)->stream('jpg', 80); //manipulate image
+            Storage::put("/public/services/$filename", $img->__toString());
+        }   
         $filenameForSaving = $request->file('image') ? '/storage/services/' . $filename : '';
-
+        if($request->parent) {
+            $parent = Service::where('slug', $request->parent)->first();
+        }
         Service::create([
             'title' => $request->title,
             'slug' => $request->slug,
@@ -39,6 +45,7 @@ class AdminServicesController extends Controller
             'seo_description' => $request->seo_description,
             'seo_title' => $request->seo_title,
             'image' => $filenameForSaving,
+            'language_parent' => $request->parent ? $parent->id : null
         ]);
 
         return view('admin.services.index')->with('success', 'Hizmet Kaydedildi');

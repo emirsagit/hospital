@@ -13,7 +13,8 @@
                     class="p-6 bg-white border-b border-gray-200">
                     @csrf
                     <div class="w-full">
-                        <h2 class="text-blue-600 text-xl mb-4">Not: Önce Yazının Dilini Seçiniz. Dil değiştirildiğinde içerik sıfırlanabilir.</h2>
+                        <h2 class="text-blue-600 text-xl mb-4">Not: Önce Yazının Dilini Seçiniz. Dil değiştirildiğinde
+                            içerik sıfırlanabilir.</h2>
                         <label class="block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2">Dil</label>
                         <select name="language" id="selectedLanguage" onchange="location.reload()"
                             class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded py-2 px-4 block w-full focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring @error('language') border-red-500 @enderror"
@@ -122,6 +123,22 @@
                             type="text" value="{{ old('seo_description') }}">
                     </div>
                     @error('seo_description')
+                    <div class="text-red-600">{{ $message }}</div>
+                    @enderror
+
+                    <div class="w-full mt-4">
+                        <label class="block text-gray-600 dark:text-gray-200 text-sm font-medium mb-2">Yazı Türkçe
+                            İçeriğin Tercümesi İse SEO ayarları için ilgili içeriği seçin</label>
+                        <select name="parent"
+                            class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded py-2 px-4 block w-full focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring @error('language') border-red-500 @enderror"
+                            value="{{ old('parent') }}">
+                            <option value="" selected>Seçiniz</option>
+                            @foreach ($parents as $parent)
+                            <option value="{{ $parent->slug }}" @if (old('parent')=== $parent->slug ) selected @endif>{{ $parent->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @error('parent')
                     <div class="text-red-600">{{ $message }}</div>
                     @enderror
 

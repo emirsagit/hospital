@@ -9,7 +9,7 @@
   {!! SEO::generate(true) !!}
 
   <!-- Fonts -->
-  <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" rel="preload">
+  <link href="{{ asset('css/fonts.css') }}" rel="preload">
   {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
